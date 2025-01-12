@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-print('hello')
+
 apikey=os.getenv('Spoonacular_API_KEY_2')
 
 steps_url=f"https://api.spoonacular.com/recipes/655098/analyzedInstructions?apiKey={apikey}"
