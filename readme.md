@@ -90,9 +90,6 @@ Contributions are welcome! Please follow these steps:
    ```
 5. Submit a pull request.
 
-## License
-This project is open-source and available under the [MIT License](LICENSE).
-
 ## Contact
 For any queries, reach out to [Rahil71](https://github.com/Rahil71).
 
