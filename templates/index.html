@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipes</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='index.css')}}">
+</head>
+<body>
+
+    <div class="search-container">
+        <h1>Find Your Favorite Recipes</h1>
+        <form method="post" action="/home">
+            <input type="text" name="foodname" placeholder="Enter food name to search" required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    {% if food_data %}
+    <h2>Search Results:</h2>
+    <div class="food-list">
+        {% for food in food_data %}
+        <div class="food-item">
+            <h3>{{ food.food_title }}</h3>
+            <img src="{{ food.food_image }}" alt="{{ food.food_title }}">
+            
+            <!-- Form to send the food_id to the backend -->
+            <form method="post" action="/food-details">
+                <input type="hidden" name="food_id" value="{{ food.food_id }}">
+                <input type="hidden" name="food_title" value="{{ food.food_title }}">
+                <input type="hidden" name="food_image" value="{{ food.food_image }}">
+                <button type="submit">View Details</button>
+            </form>                    
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+</body>
+</html>

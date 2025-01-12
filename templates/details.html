@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipe Details</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='details.css')}}">
+</head>
+<body>
+    <div class="container">
+        <!-- Back to Home -->
+        <div class="search-food">
+            <form method="post" action="/home">
+                <input type="text" name="foodname" placeholder="Enter food name to search" required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <!-- Recipe Details Section -->
+        <div class="recipe-details">
+            <h2>Recipe Details</h2>
+
+            <!-- Food Title -->
+            <h3>{{ ingredients_data[0]['food_title'] }}</h3>
+
+            <!-- Food Image -->
+            <img src="{{ ingredients_data[0]['food_image'] }}" alt="{{ ingredients_data[0]['food_title'] }}">
+
+            <!-- Ingredients Section -->
+            <h4>Ingredients:</h4>
+            <ul class="ingredients-list">
+                {% for ingredient in ingredients_data %}
+                    <li>
+                        <span>{{ ingredient.ing_name }}</span>
+                        <span>{{ ingredient.ing_val }} {{ ingredient.ing_units }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <!-- Steps Section -->
+            <h4>Steps:</h4>
+            <ul class="steps">
+                {% for step in steps_data %}
+                    <li>
+                        <span>{{ step.steps }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Search Food Section */
+.search-food {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.search-food input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-food input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.search-food button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.search-food button:hover {
+    background-color: #218838;
+}
+
+/* Recipe Details */
+.recipe-details {
+    text-align: center;
+}
+
+.recipe-details img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.recipe-details h2,
+.recipe-details h3,
+.recipe-details h4 {
+    color: #343a40;
+}
+
+/* Ingredients List */
+.ingredients-list,
+.steps {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.ingredients-list li,
+.steps li {
+    background-color: #f1f3f5;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ingredients-list li span,
+.steps li span {
+    display: inline-block;
+    color: #495057;
+}
+
+/* Footer Note */
+.footer {
+    text-align: center;
+    font-size: 14px;
+    color: #6c757d;
+    margin-top: 30px;
+}
